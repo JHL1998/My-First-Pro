@@ -1,0 +1,47 @@
+package com.luojianhua.commu.service;
+
+import com.luojianhua.commu.mapper.UserMapper;
+import com.luojianhua.commu.model.User;
+import com.luojianhua.commu.model.UserExample;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class UserService {
+
+    @Autowired
+   private UserMapper userMapper;
+
+    public void createOrUpdate(User user) {
+
+        UserExample userExample=new UserExample();
+        userExample.createCriteria().andAccountIdEqualTo(user.getAccountId());
+        List<User> users = userMapper.selectByExample(userExample);
+        if(users.size()==0){
+            //插入该数据
+            user.setGmtCreate(System.currentTimeMillis());
+            user.setGmtModified(user.getGmtCreate());
+            userMapper.insert(user);
+        }else{
+
+            //更新该数据
+
+            User updataUser=users.get(0);
+
+            User newUser=new User();
+            newUser.setGmtModified(System.currentTimeMillis());
+            newUser.setAvatarUrl(user.getAvatarUrl());
+            newUser.setToken(user.getToken());
+            newUser.setName(user.getName());
+            UserExample example=new UserExample();
+            example.createCriteria().andIdEqualTo(updataUser.getId());
+            userMapper.updateByExampleSelective(newUser,example);
+
+
+        }
+
+
+    }
+}
