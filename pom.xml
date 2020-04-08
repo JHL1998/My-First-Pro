@@ -85,6 +85,11 @@
 			<artifactId>aliyun-sdk-oss</artifactId>
 			<version>3.8.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>5.0.3</version>
+		</dependency>
 
 
 <!--		<dependency>-->
@@ -136,8 +141,15 @@
 				</configuration>
 
 			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>5.0.3</version>
+			</plugin>
 
 		</plugins>
+
+
 	</build>
 
 </project>
