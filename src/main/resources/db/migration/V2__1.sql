@@ -1,0 +1,1 @@
+alter table userfor add bio varchar(256) null;

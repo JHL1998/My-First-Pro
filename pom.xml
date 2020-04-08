@@ -85,11 +85,6 @@
 			<artifactId>aliyun-sdk-oss</artifactId>
 			<version>3.8.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-			<version>5.0.3</version>
-		</dependency>
 
 
 <!--		<dependency>-->
@@ -144,7 +139,15 @@
 			<plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
-				<version>5.0.3</version>
+				<version>5.2.4</version>
+				<configuration>
+					<driver>com.mysql.cj.jdbc.Driver</driver>
+					<url>jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false</url>
+					<user>root</user>
+					<password>admin123</password>
+					<!--<schemas></schemas>-->
+				</configuration>
+
 			</plugin>
 
 		</plugins>

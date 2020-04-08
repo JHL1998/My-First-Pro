@@ -68,7 +68,7 @@ public class CommentService {
             parentComment.setCommentCount(1);
             commentMapperExt.incCommentCount(parentComment);
             //创建通知
-           createNotify(comment, dbComment.getCommentatorId(), commentator.getName(), question.getTitle(), NotificationTypeEnum.REPLY_COMMENT,question.getId());
+           createNotify(comment, dbComment.getCommentator(), commentator.getName(), question.getTitle(), NotificationTypeEnum.REPLY_COMMENT,question.getId());
         } else {
             //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
@@ -82,7 +82,7 @@ public class CommentService {
             questionMapperExt.incCommentCount(question);
 
              //创建通知
-            createNotify(comment,question.getCreatorId(),commentator.getName(),question.getTitle(),NotificationTypeEnum.REPLY_QUESTION,question.getId());
+            createNotify(comment,question.getCreator(),commentator.getName(),question.getTitle(),NotificationTypeEnum.REPLY_QUESTION,question.getId());
 
         }
     }
@@ -90,21 +90,21 @@ public class CommentService {
 
     private void createNotify(Comment comment, Long receiver, String notifierName, String outerTitle, NotificationTypeEnum notificationType,Long outerId) {
          //接收通知的人和触发通知的人，是同一人
-        if(receiver==comment.getCommentatorId()){
+        if(receiver==comment.getCommentator()){
 
                return;
            }
         Notification notification = new Notification();
         notification.setGmtCreate(System.currentTimeMillis());
         notification.setType(notificationType.getType());
-        notification.setOuterId(outerId);
+        notification.setOuterid(outerId);
         //评论人
-        notification.setNotifier(comment.getCommentatorId());
+        notification.setNotifier(comment.getCommentator());
         //状态
         notification.setStatus(NotificationStatusEnum.UNREAD.getStatus());
         //接收到通知的人
         notification.setReceiver(receiver);
-        notification.setNotificationName(notifierName);
+        notification.setNotifierName(notifierName);
         notification.setOuterTitle(outerTitle);
         notificationMapper.insert(notification);
 
@@ -122,7 +122,7 @@ public class CommentService {
         if (comments.size() == 0) return new ArrayList<>();
         //获取去重的评论人
         Set<Long> commentators = comments.stream().
-                map(comment -> comment.getCommentatorId()).
+                map(comment -> comment.getCommentator()).
                 collect(Collectors.toSet());
         List<Long> userIds = new ArrayList<>();
         userIds.addAll(commentators);
@@ -138,7 +138,7 @@ public class CommentService {
         List<CommentDTO> commentDTOList = comments.stream().map(comment -> {
             CommentDTO commentDTO = new CommentDTO();
             BeanUtils.copyProperties(comment, commentDTO);
-            commentDTO.setUser(userMap.get(comment.getCommentatorId()));
+            commentDTO.setUser(userMap.get(comment.getCommentator()));
             return commentDTO;
         }).collect(Collectors.toList());
         return commentDTOList;

@@ -1,728 +1,248 @@
-2020-04-08 21:48:53.613  INFO 47123 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47123 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 21:48:53.616  INFO 47123 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 21:48:57.775  INFO 47123 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:48:57.987  INFO 47123 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 21:48:58.475  INFO 47123 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.72 seconds (JVM running for 7.652)
-2020-04-08 21:48:59.335  INFO 47123 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:49:08.639  INFO 47133 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47133 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 21:49:08.655  INFO 47133 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 21:49:11.896  INFO 47133 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 21:49:11.927  INFO 47133 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 21:49:11.928  INFO 47133 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 21:49:12.101  INFO 47133 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 21:49:12.103  INFO 47133 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3094 ms
-2020-04-08 21:49:13.683  INFO 47133 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:49:14.045  INFO 47133 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 21:49:14.538  INFO 47133 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 21:49:14.546  INFO 47133 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 8.098 seconds (JVM running for 11.144)
-2020-04-08 21:49:19.246  INFO 47133 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 21:49:19.247  INFO 47133 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 21:49:19.292  INFO 47133 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 45 ms
-2020-04-08 21:49:19.634  INFO 47133 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 21:49:19.945  INFO 47133 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 21:49:20.185 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 21:49:20.237 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 21:49:20.285 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 21:49:20.356 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 21:49:20.360 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 21:49:20.370 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 21:49:20.372 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 21:49:20.376 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 21:49:20.378 DEBUG 47133 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 21:49:43.228  INFO 47133 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:49:43.231  INFO 47133 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 21:49:43.251  INFO 47133 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 21:54:52.834  INFO 47186 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47186 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 21:54:52.839  INFO 47186 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 21:54:57.362  INFO 47186 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:54:57.607  INFO 47186 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 21:54:58.346  INFO 47186 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 6.552 seconds (JVM running for 9.39)
-2020-04-08 21:54:59.424  INFO 47186 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:55:07.923  INFO 47198 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47198 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 21:55:07.932  INFO 47198 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 21:55:09.784  INFO 47198 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 21:55:09.796  INFO 47198 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 21:55:09.797  INFO 47198 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 21:55:09.926  INFO 47198 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 21:55:09.927  INFO 47198 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1862 ms
-2020-04-08 21:55:10.890  INFO 47198 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:55:11.104  INFO 47198 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 21:55:11.458  INFO 47198 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 21:55:11.465  INFO 47198 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.424 seconds (JVM running for 7.362)
-2020-04-08 21:57:12.010  INFO 47198 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 21:57:12.011  INFO 47198 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 21:57:12.043  INFO 47198 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
-2020-04-08 21:57:12.377  INFO 47198 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 21:57:12.704  INFO 47198 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 21:57:12.717 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 21:57:12.773 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 21:57:12.817 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 21:57:13.020 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 21:57:13.020 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 21:57:13.024 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 21:57:13.026 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 21:57:13.026 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 21:57:13.027 DEBUG 47198 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 21:58:40.486  INFO 47198 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 21:58:40.489  INFO 47198 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 21:58:40.514  INFO 47198 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:09:32.978  INFO 47240 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47240 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:09:32.984  INFO 47240 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:09:37.344  INFO 47240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:09:37.586  INFO 47240 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:09:38.206  INFO 47240 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 7.117 seconds (JVM running for 11.9)
-2020-04-08 22:09:38.916  INFO 47240 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:09:46.571  INFO 47255 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47255 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:09:46.580  INFO 47255 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:09:49.232  INFO 47255 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:09:49.248  INFO 47255 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:09:49.254  INFO 47255 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:09:49.405  INFO 47255 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:09:49.405  INFO 47255 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2689 ms
-2020-04-08 22:09:50.370  INFO 47255 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:09:50.635  INFO 47255 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:09:51.002  INFO 47255 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:09:51.010  INFO 47255 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 5.526 seconds (JVM running for 7.794)
-2020-04-08 22:09:58.508  INFO 47255 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:09:58.512  INFO 47255 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:09:58.534  INFO 47255 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
-2020-04-08 22:09:58.659  INFO 47255 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:09:58.948  INFO 47255 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:09:58.960 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:09:58.990 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:09:59.016 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:09:59.053 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:09:59.053 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:09:59.071 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:09:59.073 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:09:59.073 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:09:59.078 DEBUG 47255 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:10:45.816  INFO 47255 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:10:45.821  INFO 47255 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:10:45.830  INFO 47255 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:12:59.876  INFO 47339 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47339 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:12:59.879  INFO 47339 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:13:04.340  INFO 47339 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:13:04.592  INFO 47339 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:13:05.182  INFO 47339 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 6.425 seconds (JVM running for 8.809)
-2020-04-08 22:13:05.964  INFO 47339 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:13:14.952  INFO 47362 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47362 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:13:14.959  INFO 47362 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:13:18.603  INFO 47362 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:13:18.616  INFO 47362 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:13:18.616  INFO 47362 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:13:18.748  INFO 47362 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:13:18.748  INFO 47362 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3619 ms
-2020-04-08 22:13:19.967  INFO 47362 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:13:20.242  INFO 47362 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:13:20.592  INFO 47362 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:13:20.598  INFO 47362 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 6.592 seconds (JVM running for 8.431)
-2020-04-08 22:13:24.355  INFO 47362 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:13:24.355  INFO 47362 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:13:24.373  INFO 47362 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2020-04-08 22:13:24.494  INFO 47362 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:13:24.742  INFO 47362 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:13:24.753 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:13:24.782 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:13:24.825 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:13:24.934 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:13:24.934 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:13:24.944 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:13:24.945 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:13:24.947 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:13:24.949 DEBUG 47362 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:13:55.499  INFO 47362 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:13:55.501  INFO 47362 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:13:55.520  INFO 47362 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:14:08.477  INFO 47380 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47380 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:14:08.490  INFO 47380 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:14:12.214  INFO 47380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:14:12.390  INFO 47380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:14:12.950  INFO 47380 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.201 seconds (JVM running for 7.13)
-2020-04-08 22:14:13.631  INFO 47380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:14:20.757  INFO 47398 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47398 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:14:20.763  INFO 47398 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:14:22.789  INFO 47398 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:14:22.804  INFO 47398 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:14:22.805  INFO 47398 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:14:23.000  INFO 47398 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:14:23.001  INFO 47398 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2137 ms
-2020-04-08 22:14:24.065  INFO 47398 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:14:24.290  INFO 47398 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:14:24.638  INFO 47398 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:14:24.645  INFO 47398 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.661 seconds (JVM running for 6.285)
-2020-04-08 22:14:39.934  INFO 47398 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:14:39.934  INFO 47398 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:14:39.949  INFO 47398 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2020-04-08 22:14:40.195  INFO 47398 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:14:40.528  INFO 47398 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:14:40.539 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:14:40.580 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:14:40.618 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:14:40.664 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:14:40.664 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:14:40.675 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:14:40.676 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:14:40.677 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:14:40.679 DEBUG 47398 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:15:36.286  INFO 47398 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:15:36.292  INFO 47398 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:15:36.317  INFO 47398 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:15:55.424  INFO 47419 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47419 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:15:55.429  INFO 47419 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:16:01.023  INFO 47419 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:16:01.386  INFO 47419 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:16:02.363  INFO 47419 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 7.921 seconds (JVM running for 10.523)
-2020-04-08 22:16:04.101  INFO 47419 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:16:14.286  INFO 47439 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47439 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:16:14.294  INFO 47439 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:16:16.204  INFO 47439 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:16:16.216  INFO 47439 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:16:16.216  INFO 47439 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:16:16.350  INFO 47439 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:16:16.350  INFO 47439 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1891 ms
-2020-04-08 22:16:17.139  INFO 47439 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:16:17.381  INFO 47439 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:16:17.752  INFO 47439 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:16:17.761  INFO 47439 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.399 seconds (JVM running for 6.712)
-2020-04-08 22:16:22.760  INFO 47439 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:16:22.760  INFO 47439 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:16:22.779  INFO 47439 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2020-04-08 22:16:22.995  INFO 47439 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:16:23.424  INFO 47439 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:16:23.437 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:16:23.476 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:16:23.509 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:16:23.571 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:16:23.572 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:16:23.580 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:16:23.586 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:16:23.587 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:16:23.590 DEBUG 47439 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:16:30.873 DEBUG 47439 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:16:30.874 DEBUG 47439 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:16:30.875 DEBUG 47439 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:16:52.022 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:16:52.024 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:16:52.029 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:16:52.030 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:16:52.032 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:16:52.034 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:16:52.035 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:16:52.036 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:16:52.037 DEBUG 47439 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:17:03.819  INFO 47439 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:17:03.823  INFO 47439 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:17:03.837  INFO 47439 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:17:18.181  INFO 47453 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47453 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:17:18.186  INFO 47453 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:17:22.249  INFO 47453 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:17:22.576  INFO 47453 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:17:23.203  INFO 47453 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.636 seconds (JVM running for 7.707)
-2020-04-08 22:17:24.207  INFO 47453 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:17:31.798  INFO 47463 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47463 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:17:31.809  INFO 47463 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:17:34.562  INFO 47463 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:17:34.576  INFO 47463 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:17:34.576  INFO 47463 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:17:34.749  INFO 47463 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:17:34.749  INFO 47463 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2836 ms
-2020-04-08 22:17:35.714  INFO 47463 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:17:36.011  INFO 47463 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:17:36.393  INFO 47463 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:17:36.398  INFO 47463 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 5.741 seconds (JVM running for 7.407)
-2020-04-08 22:17:39.071  INFO 47463 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:17:39.072  INFO 47463 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:17:39.114  INFO 47463 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 37 ms
-2020-04-08 22:17:39.294  INFO 47463 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:17:39.663  INFO 47463 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:17:39.678 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:17:39.706 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:17:39.732 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:17:39.764 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:17:39.765 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:17:39.770 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:17:39.771 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:17:39.772 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:17:39.774 DEBUG 47463 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:17:44.092 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:17:44.092 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: b8eed1ec-7d88-4188-828d-974cf74b4478(String)
-2020-04-08 22:17:44.093 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:17:58.036 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( account_id = ? ) 
-2020-04-08 22:17:58.038 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: 60779577(String)
-2020-04-08 22:17:58.039 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
-2020-04-08 22:17:58.040 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : ==>  Preparing: insert into userfor (id, name, account_id, token, gmt_create, gmt_modified, avatar_url) values (?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:17:58.041 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : ==> Parameters: null, Jianhua Luo(String), 60779577(String), afda93a5-3c89-4a0e-bf79-9540c90b8552(String), 1586355478040(Long), 1586355478040(Long), https://avatars0.githubusercontent.com/u/60779577?v=4(String)
-2020-04-08 22:17:58.063 DEBUG 47463 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : <==    Updates: 1
-2020-04-08 22:17:58.078 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:17:58.078 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:17:58.082 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:17:58.096 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:17:58.096 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:17:58.106 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:17:58.107 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:17:58.108 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:17:58.109 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:17:58.109 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:17:58.110 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:17:58.111 DEBUG 47463 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:18:00.707 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:18:00.709 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:18:00.712 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:18:00.715 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:18:00.716 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:18:00.718 DEBUG 47463 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:18:00.981 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:18:00.982 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:18:00.987 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:18:00.989 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:18:00.990 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:18:01.000 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:18:01.019 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:18:01.020 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:18:01.026 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:18:01.028 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:18:01.030 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:18:01.034 DEBUG 47463 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:18:17.056 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:18:17.059 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:18:17.064 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:18:17.067 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:18:17.068 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:18:17.069 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:18:17.074 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:18:17.076 DEBUG 47463 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第一个问题(String), 1586355497073(Long), 1586355497073(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,JavaScrpit(String), 测试一下问题能否正常发布(String)
-2020-04-08 22:19:07.005  INFO 47463 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:19:07.010  INFO 47463 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:19:07.026  INFO 47463 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:20:30.799  INFO 47495 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47495 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:20:30.803  INFO 47495 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:20:35.427  INFO 47495 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:20:35.676  INFO 47495 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:20:36.362  INFO 47495 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 6.553 seconds (JVM running for 9.455)
-2020-04-08 22:20:37.146  INFO 47495 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:20:45.597  INFO 47510 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47510 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:20:45.605  INFO 47510 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:20:47.602  INFO 47510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:20:47.616  INFO 47510 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:20:47.616  INFO 47510 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:20:47.741  INFO 47510 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:20:47.742  INFO 47510 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2006 ms
-2020-04-08 22:20:48.681  INFO 47510 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:20:48.909  INFO 47510 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:20:49.243  INFO 47510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:20:49.249  INFO 47510 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.799 seconds (JVM running for 7.814)
-2020-04-08 22:21:20.083  INFO 47510 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:21:20.084  INFO 47510 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:21:20.106  INFO 47510 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
-2020-04-08 22:21:20.348  INFO 47510 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:21:20.650  INFO 47510 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:21:20.664 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:21:20.696 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:21:20.732 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:21:20.908 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:21:20.910 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:21:20.917 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:21:20.957 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:21:20.958 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:21:20.960 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:21:20.961 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:21:20.962 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:21:20.963 DEBUG 47510 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:21:25.934 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:21:25.935 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:21:25.938 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:21:25.940 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:21:25.941 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:21:25.943 DEBUG 47510 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:21:26.159 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:21:26.160 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:21:26.166 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:21:26.192 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:21:26.193 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:21:26.202 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:21:26.244 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:21:26.245 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:21:26.250 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:21:26.253 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:21:26.255 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:21:26.257 DEBUG 47510 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:21:40.470 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:21:40.472 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:21:40.474 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:21:40.477 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:21:40.478 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:21:40.480 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:21:40.487 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:21:40.489 DEBUG 47510 --- [http-nio-8887-exec-4] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第一个问题(String), 1586355700487(Long), 1586355700487(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,JavaScrpit(String), 测试一下问题能否发布(String)
-2020-04-08 22:32:45.695  INFO 47510 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:32:45.705  INFO 47510 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:32:45.725  INFO 47510 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:43:34.962  INFO 47590 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47590 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:43:34.967  INFO 47590 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:43:40.259  INFO 47590 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:43:40.513  INFO 47590 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:43:41.262  INFO 47590 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 7.458 seconds (JVM running for 10.135)
-2020-04-08 22:43:42.147  INFO 47590 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:43:54.447  INFO 47605 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47605 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:43:54.456  INFO 47605 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:43:59.146  INFO 47605 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:43:59.174  INFO 47605 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:43:59.175  INFO 47605 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:43:59.408  INFO 47605 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:43:59.408  INFO 47605 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4632 ms
-2020-04-08 22:44:01.209  INFO 47605 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:44:01.554  INFO 47605 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:44:02.325  INFO 47605 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:44:02.332  INFO 47605 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 10.155 seconds (JVM running for 15.043)
-2020-04-08 22:44:06.677  INFO 47605 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:44:06.683  INFO 47605 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:44:06.700  INFO 47605 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
-2020-04-08 22:44:07.116  INFO 47605 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:44:07.785  INFO 47605 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:44:07.802 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:44:07.846 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:44:07.877 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:44:07.934 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:44:07.935 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:44:07.938 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:44:08.045 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:44:08.046 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:44:08.086 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:44:08.093 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:44:08.103 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:44:08.106 DEBUG 47605 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:44:13.319 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:44:13.322 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:44:13.324 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:44:13.326 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:44:13.327 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:44:13.331 DEBUG 47605 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:44:13.653 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:44:13.653 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:44:13.656 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:44:13.659 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:44:13.660 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:44:13.662 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:44:13.677 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:44:13.678 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:44:13.683 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:44:13.685 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:44:13.686 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:44:13.688 DEBUG 47605 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:44:23.379 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:44:23.380 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:44:23.383 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:44:23.386 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:44:23.387 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:44:23.388 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:44:23.396 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:44:23.399 DEBUG 47605 --- [http-nio-8887-exec-5] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第一个问题(String), 1586357063395(Long), 1586357063395(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,C++(String), 测试问题(String)
-2020-04-08 22:45:35.904  INFO 47605 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:45:35.913  INFO 47605 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:45:35.934  INFO 47605 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:52:20.311  INFO 47632 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47632 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:52:20.315  INFO 47632 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:52:26.640  INFO 47632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:52:26.967  INFO 47632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:52:27.856  INFO 47632 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 8.955 seconds (JVM running for 12.106)
-2020-04-08 22:52:29.165  INFO 47632 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:52:39.596  INFO 47650 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47650 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:52:39.603  INFO 47650 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:52:47.150  INFO 47650 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:52:47.173  INFO 47650 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:52:47.173  INFO 47650 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:52:47.350  INFO 47650 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:52:47.351  INFO 47650 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7294 ms
-2020-04-08 22:52:48.299  INFO 47650 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:52:48.706  INFO 47650 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:52:49.183  INFO 47650 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:52:49.191  INFO 47650 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 11.374 seconds (JVM running for 14.56)
-2020-04-08 22:52:55.106  INFO 47650 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:52:55.108  INFO 47650 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:52:55.143  INFO 47650 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
-2020-04-08 22:52:55.421  INFO 47650 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:52:55.825  INFO 47650 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:52:55.922 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:52:56.022 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:52:56.074 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:52:56.114 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:52:56.115 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:52:56.120 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:52:56.151 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:52:56.151 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:52:56.160 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:52:56.163 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:52:56.165 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:52:56.167 DEBUG 47650 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
-2020-04-08 22:52:58.825 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:52:58.826 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:52:58.827 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:52:58.830 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:52:58.834 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:52:58.837 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:52:58.847 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? ) 
-2020-04-08 22:52:58.849 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long)
-2020-04-08 22:52:58.851 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:52:58.854 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.selectByExampleWithRowbounds   : ==>  Preparing: select id, notifier, receiver, outer_id, type, gmt_create, status, notification_name, outer_title from notification WHERE ( receiver = ? ) order by gmt_create desc 
-2020-04-08 22:52:58.854 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.selectByExampleWithRowbounds   : ==> Parameters: 1(Long)
-2020-04-08 22:52:58.855 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.selectByExampleWithRowbounds   : <==      Total: 0
-2020-04-08 22:52:58.857 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:52:58.858 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:52:58.860 DEBUG 47650 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:53:00.457 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:53:00.457 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:53:00.460 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:53:00.464 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:53:00.464 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:53:00.466 DEBUG 47650 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:53:00.706 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:53:00.707 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:53:00.713 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:53:00.716 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:53:00.717 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:53:00.721 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:53:00.753 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:53:00.754 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:53:00.760 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:53:00.776 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:53:00.777 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:53:00.782 DEBUG 47650 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:53:09.319 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:53:09.322 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:53:09.327 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:53:09.334 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:53:09.334 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:53:09.336 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:55:51.512  WARN 47650 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m55s582ms).
-2020-04-08 22:55:51.522 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:55:51.548 DEBUG 47650 --- [http-nio-8887-exec-6] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第一个问题(String), 1586357589341(Long), 1586357589341(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,Python(String), 测试问题(String)
-2020-04-08 22:55:51.591 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:55:51.592 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:55:51.593 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:55:51.597 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:55:51.598 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:55:51.599 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:55:51.600 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:55:51.602 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:55:51.608 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:55:51.617 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:55:51.619 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:55:51.626 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:55:51.627 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:55:51.632 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:55:51.632 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:55:51.633 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:55:51.634 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:55:51.635 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:55:51.635 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:55:51.639 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:55:51.640 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:55:51.641 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:55:51.641 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.Q.selectBySearch                 : <==      Total: 1
-2020-04-08 22:55:51.642 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor where id = ? 
-2020-04-08 22:55:51.643 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
-2020-04-08 22:55:51.644 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.Q.selectBySearch                 : <==      Total: 1
-2020-04-08 22:55:51.644 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor where id = ? 
-2020-04-08 22:55:51.646 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
-2020-04-08 22:55:51.647 DEBUG 47650 --- [http-nio-8887-exec-8] c.l.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
-2020-04-08 22:55:51.649 DEBUG 47650 --- [http-nio-8887-exec-7] c.l.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
-2020-04-08 22:55:51.724  INFO 47650 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:55:51.727  INFO 47650 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:55:51.749  INFO 47650 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-08 22:55:52.373  WARN 47650 --- [http-nio-8887-exec-6] o.s.jdbc.support.SQLErrorCodesFactory    : Error while extracting database name - falling back to empty error codes
-
-org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:345) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.support.SQLErrorCodesFactory.getErrorCodes(SQLErrorCodesFactory.java:215) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.setDataSource(SQLErrorCodeSQLExceptionTranslator.java:137) [spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.<init>(SQLErrorCodeSQLExceptionTranslator.java:100) [spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.mybatis.spring.MyBatisExceptionTranslator.lambda$new$0(MyBatisExceptionTranslator.java:54) [mybatis-spring-2.0.3.jar:2.0.3]
-	at org.mybatis.spring.MyBatisExceptionTranslator.initExceptionTranslator(MyBatisExceptionTranslator.java:102) [mybatis-spring-2.0.3.jar:2.0.3]
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:87) [mybatis-spring-2.0.3.jar:2.0.3]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.3.jar:2.0.3]
-	at com.sun.proxy.$Proxy66.insert(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) ~[mybatis-spring-2.0.3.jar:2.0.3]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar:3.5.3]
-	at com.sun.proxy.$Proxy70.insert(Unknown Source) ~[na:na]
-	at com.luojianhua.commu.service.QuestionService.createOrUpdate(QuestionService.java:169) ~[classes/:na]
-	at com.luojianhua.commu.controller.PublishController.doPublic(PublishController.java:96) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_221]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_221]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_221]
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	... 65 common frames omitted
-Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96) ~[HikariCP-3.4.2.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	... 66 common frames omitted
-
-2020-04-08 22:56:07.223  INFO 47680 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 47680 (started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:56:07.227  INFO 47680 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
-2020-04-08 22:56:12.788  INFO 47680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:56:13.100  INFO 47680 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:56:13.789  INFO 47680 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 7.622 seconds (JVM running for 9.882)
-2020-04-08 22:56:14.784  INFO 47680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:56:22.847  INFO 47693 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 47693 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
-2020-04-08 22:56:22.856  INFO 47693 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
-2020-04-08 22:56:24.902  INFO 47693 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-08 22:56:24.913  INFO 47693 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-08 22:56:24.914  INFO 47693 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-08 22:56:25.057  INFO 47693 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-08 22:56:25.058  INFO 47693 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2092 ms
-2020-04-08 22:56:25.906  INFO 47693 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:56:26.101  INFO 47693 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-08 22:56:26.428  INFO 47693 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-08 22:56:26.435  INFO 47693 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.345 seconds (JVM running for 6.751)
-2020-04-08 22:56:29.794  INFO 47693 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-08 22:56:29.795  INFO 47693 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-08 22:56:29.844  INFO 47693 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 39 ms
-2020-04-08 22:56:30.261  INFO 47693 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-08 22:56:30.606  INFO 47693 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-08 22:56:30.617 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:30.646 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:30.679 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:30.715 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:30.716 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:30.718 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:30.786 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
-2020-04-08 22:56:30.787 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
-2020-04-08 22:56:30.788 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
-2020-04-08 22:56:30.790 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
-2020-04-08 22:56:30.790 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-08 22:56:30.794 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 1
-2020-04-08 22:56:30.796 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor where id = ? 
-2020-04-08 22:56:30.796 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
-2020-04-08 22:56:30.797 DEBUG 47693 --- [http-nio-8887-exec-1] c.l.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
-2020-04-08 22:56:34.800 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:34.801 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:34.805 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:34.808 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:34.808 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:34.809 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:34.813 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag , description from question where id = ? 
-2020-04-08 22:56:34.813 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.Q.selectByPrimaryKey             : ==> Parameters: 1(Long)
-2020-04-08 22:56:34.817 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.Q.selectByPrimaryKey             : <==      Total: 1
-2020-04-08 22:56:34.819 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor where id = ? 
-2020-04-08 22:56:34.820 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
-2020-04-08 22:56:34.822 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
-2020-04-08 22:56:34.823 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.QuestionMapperExt.selectRelated  : ==>  Preparing: select * from question where id!=? and tag regexp ? 
-2020-04-08 22:56:34.823 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.QuestionMapperExt.selectRelated  : ==> Parameters: 1(Long), Java|Python(String)
-2020-04-08 22:56:34.834 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.QuestionMapperExt.selectRelated  : <==      Total: 0
-2020-04-08 22:56:34.849 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.CommentMapper.selectByExample    : ==>  Preparing: select id, type, gmt_create, gmt_modified, like_count, parent_id, commentator_id, content, comment_count from comment WHERE ( parent_id = ? and type = ? ) order by gmt_create desc 
-2020-04-08 22:56:34.850 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.CommentMapper.selectByExample    : ==> Parameters: 1(Long), 1(Integer)
-2020-04-08 22:56:34.851 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.m.CommentMapper.selectByExample    : <==      Total: 0
-2020-04-08 22:56:34.852 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.QuestionMapperExt.incView   : ==>  Preparing: update question set view_count = view_count+? where id=? 
-2020-04-08 22:56:34.853 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.QuestionMapperExt.incView   : ==> Parameters: 1(Integer), 1(Long)
-2020-04-08 22:56:34.868 DEBUG 47693 --- [http-nio-8887-exec-2] c.l.c.mapper.QuestionMapperExt.incView   : <==    Updates: 1
-2020-04-08 22:56:34.952 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:34.953 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:34.958 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:34.958 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:34.958 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:34.958 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:34.958 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:34.965 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:34.965 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:34.967 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:34.969 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:34.970 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:34.971 DEBUG 47693 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:34.973 DEBUG 47693 --- [http-nio-8887-exec-3] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:34.977 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:34.980 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:34.980 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:34.984 DEBUG 47693 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:40.792 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:40.793 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:40.794 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:40.796 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:40.796 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:40.797 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:40.895 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag , description from question where id = ? 
-2020-04-08 22:56:40.896 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.Q.selectByPrimaryKey             : ==> Parameters: 1(Long)
-2020-04-08 22:56:40.897 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.c.m.Q.selectByPrimaryKey             : <==      Total: 1
-2020-04-08 22:56:40.899 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.commu.mapper.CommentMapper.insert    : ==>  Preparing: insert into comment (id, type, gmt_create, gmt_modified, like_count, parent_id, commentator_id, content, comment_count ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-08 22:56:40.901 DEBUG 47693 --- [http-nio-8887-exec-6] c.l.commu.mapper.CommentMapper.insert    : ==> Parameters: null, 1(Integer), 1586357800882(Long), 1586357800882(Long), 0(Long), 1(Long), 1(Long), 这是第一条评论(String), 0(Integer)
-2020-04-08 22:56:48.648 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:48.649 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:48.652 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:48.654 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:48.655 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:48.656 DEBUG 47693 --- [http-nio-8887-exec-7] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:48.858 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:48.860 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:48.863 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:48.869 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:48.870 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:48.873 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:48.888 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:48.889 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:48.891 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:48.893 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:48.894 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:48.897 DEBUG 47693 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:58.673 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
-2020-04-08 22:56:58.674 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
-2020-04-08 22:56:58.677 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
-2020-04-08 22:56:58.679 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-08 22:56:58.682 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
-2020-04-08 22:56:58.683 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.c.m.N.countByExample                 : <==      Total: 1
-2020-04-08 22:56:58.691 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator_id, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-2020-04-08 22:56:58.693 DEBUG 47693 --- [http-nio-8887-exec-9] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第二个问题(String), 1586357818691(Long), 1586357818691(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,Python(String), 大师答(String)
-2020-04-08 22:57:14.695  INFO 47693 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-08 22:57:14.700  INFO 47693 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-08 22:57:14.710  INFO 47693 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:00:03.758  INFO 48395 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:00:03.766  INFO 48395 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:00:03.788  INFO 48395 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:04:13.908  INFO 48413 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 48413 (started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:04:13.912  INFO 48413 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
+2020-04-09 00:04:18.023  INFO 48413 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:04:18.297  INFO 48413 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:04:18.847  INFO 48413 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.708 seconds (JVM running for 7.821)
+2020-04-09 00:04:19.593  INFO 48413 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:04:28.091  INFO 48425 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 48425 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:04:28.098  INFO 48425 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
+2020-04-09 00:04:30.302  INFO 48425 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-04-09 00:04:30.321  INFO 48425 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-09 00:04:30.322  INFO 48425 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-09 00:04:30.510  INFO 48425 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-09 00:04:30.511  INFO 48425 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2254 ms
+2020-04-09 00:04:31.336  INFO 48425 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:04:31.567  INFO 48425 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:04:31.931  INFO 48425 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-04-09 00:04:31.936  INFO 48425 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 5.053 seconds (JVM running for 6.845)
+2020-04-09 00:04:41.366  INFO 48425 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-09 00:04:41.367  INFO 48425 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-09 00:04:41.393  INFO 48425 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2020-04-09 00:04:41.695  INFO 48425 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-09 00:04:41.975  INFO 48425 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-09 00:04:41.993 DEBUG 48425 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:04:42.028 DEBUG 48425 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
+2020-04-09 00:05:03.203 DEBUG 48425 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:05:03.206 DEBUG 48425 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
+2020-04-09 00:05:11.897  INFO 48425 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:05:11.904  INFO 48425 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:05:11.914  INFO 48425 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:09:13.886  INFO 48583 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 48583 (started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:09:13.901  INFO 48583 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
+2020-04-09 00:09:20.062  INFO 48583 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:09:20.318  INFO 48583 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:09:21.536  INFO 48583 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 8.87 seconds (JVM running for 11.476)
+2020-04-09 00:09:22.457  INFO 48583 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:09:29.754  INFO 48597 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 48597 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:09:29.785  INFO 48597 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
+2020-04-09 00:09:31.352  INFO 48597 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-04-09 00:09:31.363  INFO 48597 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-09 00:09:31.364  INFO 48597 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-09 00:09:31.489  INFO 48597 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-09 00:09:31.489  INFO 48597 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1530 ms
+2020-04-09 00:09:32.258  INFO 48597 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:09:32.443  INFO 48597 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:09:32.720  INFO 48597 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-04-09 00:09:32.725  INFO 48597 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 3.834 seconds (JVM running for 5.648)
+2020-04-09 00:09:37.162  INFO 48597 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-09 00:09:37.163  INFO 48597 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-09 00:09:37.176  INFO 48597 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-09 00:09:37.383  INFO 48597 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-09 00:09:37.792  INFO 48597 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-09 00:09:37.803 DEBUG 48597 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:09:37.830 DEBUG 48597 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
+2020-04-09 00:12:41.181  INFO 48597 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:12:41.185  INFO 48597 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:12:41.195  INFO 48597 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:12:56.260  INFO 48624 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 48624 (started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:12:56.264  INFO 48624 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
+2020-04-09 00:13:00.015  INFO 48624 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:13:00.263  INFO 48624 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:13:00.747  INFO 48624 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.155 seconds (JVM running for 7.237)
+2020-04-09 00:13:01.490  INFO 48624 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:13:08.832  INFO 48635 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 48635 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:13:08.837  INFO 48635 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
+2020-04-09 00:13:10.655  INFO 48635 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-04-09 00:13:10.667  INFO 48635 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-09 00:13:10.667  INFO 48635 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-09 00:13:10.793  INFO 48635 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-09 00:13:10.794  INFO 48635 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1875 ms
+2020-04-09 00:13:11.666  INFO 48635 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:13:11.858  INFO 48635 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:13:12.147  INFO 48635 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-04-09 00:13:12.152  INFO 48635 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.104 seconds (JVM running for 5.91)
+2020-04-09 00:13:17.704  INFO 48635 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-09 00:13:17.705  INFO 48635 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-09 00:13:17.730  INFO 48635 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2020-04-09 00:13:17.888  INFO 48635 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-09 00:13:18.222  INFO 48635 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-09 00:13:18.233 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:18.261 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
+2020-04-09 00:13:18.286 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:13:18.318 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
+2020-04-09 00:13:18.318 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
+2020-04-09 00:13:18.321 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
+2020-04-09 00:13:18.322 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
+2020-04-09 00:13:18.324 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-04-09 00:13:18.325 DEBUG 48635 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-04-09 00:13:27.853 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:27.855 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: afda93a5-3c89-4a0e-bf79-9540c90b8552(String)
+2020-04-09 00:13:27.857 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:13:32.707 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( account_id = ? ) 
+2020-04-09 00:13:32.709 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: 60779577(String)
+2020-04-09 00:13:32.710 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:13:32.711 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.commu.mapper.UserMapper.insert       : ==>  Preparing: insert into userfor (id, name, account_id, token, gmt_create, gmt_modified, avatar_url) values (?, ?, ?, ?, ?, ?, ?) 
+2020-04-09 00:13:32.712 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.commu.mapper.UserMapper.insert       : ==> Parameters: null, Jianhua Luo(String), 60779577(String), a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String), 1586362412710(Long), 1586362412710(Long), https://avatars0.githubusercontent.com/u/60779577?v=4(String)
+2020-04-09 00:13:32.714 DEBUG 48635 --- [http-nio-8887-exec-3] c.l.commu.mapper.UserMapper.insert       : <==    Updates: 1
+2020-04-09 00:13:32.726 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:32.727 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:13:32.729 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:13:32.746 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:13:32.747 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:13:32.748 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:13:32.750 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
+2020-04-09 00:13:32.750 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
+2020-04-09 00:13:32.751 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
+2020-04-09 00:13:32.752 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
+2020-04-09 00:13:32.752 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-04-09 00:13:32.753 DEBUG 48635 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-04-09 00:13:35.136 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:35.137 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:13:35.139 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:13:35.141 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:13:35.142 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:13:35.144 DEBUG 48635 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:13:35.371 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:35.372 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:13:35.374 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:13:35.377 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:13:35.378 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:13:35.380 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:13:35.396 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:35.397 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:13:35.400 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:13:35.403 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:13:35.406 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:13:35.409 DEBUG 48635 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:13:46.314 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:13:46.317 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:13:46.321 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:13:46.324 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:13:46.325 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:13:46.326 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:13:46.332 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2020-04-09 00:13:46.334 DEBUG 48635 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 这是第一个问题(String), 1586362426332(Long), 1586362426332(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,JavaScrpit(String), 测试问题(String)
+2020-04-09 00:14:08.043  INFO 48635 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:14:08.045  INFO 48635 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:14:08.065  INFO 48635 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:22:41.975  INFO 48724 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 48724 (started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:22:41.983  INFO 48724 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
+2020-04-09 00:22:51.411  INFO 48724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:22:51.857  INFO 48724 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:22:53.102  INFO 48724 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 12.371 seconds (JVM running for 17.414)
+2020-04-09 00:22:54.842  INFO 48724 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:23:04.742  INFO 48757 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 48757 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:23:04.749  INFO 48757 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
+2020-04-09 00:23:07.735  INFO 48757 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-04-09 00:23:07.759  INFO 48757 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-09 00:23:07.759  INFO 48757 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-09 00:23:08.100  INFO 48757 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-09 00:23:08.101  INFO 48757 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3102 ms
+2020-04-09 00:23:09.928  INFO 48757 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:23:10.173  INFO 48757 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:23:10.603  INFO 48757 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-04-09 00:23:10.609  INFO 48757 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 6.962 seconds (JVM running for 9.148)
+2020-04-09 00:23:23.645  INFO 48757 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-09 00:23:23.650  INFO 48757 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-09 00:23:23.675  INFO 48757 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2020-04-09 00:23:23.913  INFO 48757 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-09 00:23:24.203  INFO 48757 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-09 00:23:24.212 DEBUG 48757 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:23:24.244 DEBUG 48757 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:24:49.898  INFO 48757 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:24:49.903  INFO 48757 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:24:49.911  INFO 48757 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-09 00:27:31.288  INFO 48787 --- [main] c.l.commu.CommuApplicationTests          : Starting CommuApplicationTests on luojianhuadeMacBook-Air.local with PID 48787 (started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:27:31.295  INFO 48787 --- [main] c.l.commu.CommuApplicationTests          : No active profile set, falling back to default profiles: default
+2020-04-09 00:27:34.795  INFO 48787 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:27:34.970  INFO 48787 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:27:35.463  INFO 48787 --- [main] c.l.commu.CommuApplicationTests          : Started CommuApplicationTests in 5.058 seconds (JVM running for 7.258)
+2020-04-09 00:27:36.203  INFO 48787 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:27:42.189  INFO 48796 --- [main] com.luojianhua.commu.CommuApplication    : Starting CommuApplication on luojianhuadeMacBook-Air.local with PID 48796 (/Users/luojianhua/commu/target/classes started by luojianhua in /Users/luojianhua/commu)
+2020-04-09 00:27:42.195  INFO 48796 --- [main] com.luojianhua.commu.CommuApplication    : No active profile set, falling back to default profiles: default
+2020-04-09 00:27:43.927  INFO 48796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-04-09 00:27:43.939  INFO 48796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-09 00:27:43.940  INFO 48796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-09 00:27:44.073  INFO 48796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-09 00:27:44.074  INFO 48796 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1793 ms
+2020-04-09 00:27:45.013  INFO 48796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:27:45.231  INFO 48796 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-09 00:27:45.529  INFO 48796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-04-09 00:27:45.535  INFO 48796 --- [main] com.luojianhua.commu.CommuApplication    : Started CommuApplication in 4.139 seconds (JVM running for 5.268)
+2020-04-09 00:28:09.512  INFO 48796 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-09 00:28:09.513  INFO 48796 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-09 00:28:09.527  INFO 48796 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-09 00:28:09.654  INFO 48796 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-09 00:28:09.994  INFO 48796 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-09 00:28:10.004 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:10.032 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:28:10.058 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:28:10.090 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
+2020-04-09 00:28:10.091 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
+2020-04-09 00:28:10.095 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
+2020-04-09 00:28:10.096 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
+2020-04-09 00:28:10.097 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-04-09 00:28:10.098 DEBUG 48796 --- [http-nio-8887-exec-1] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-04-09 00:28:13.949 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:13.950 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: a1e0591c-0e1a-471f-a436-67a6b7cfdbe7(String)
+2020-04-09 00:28:13.951 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:28:20.373 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( account_id = ? ) 
+2020-04-09 00:28:20.375 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: 60779577(String)
+2020-04-09 00:28:20.376 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-04-09 00:28:20.377 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : ==>  Preparing: insert into userfor (id, name, account_id, token, gmt_create, gmt_modified, avatar_url) values (?, ?, ?, ?, ?, ?, ?) 
+2020-04-09 00:28:20.379 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : ==> Parameters: null, Jianhua Luo(String), 60779577(String), c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String), 1586363300377(Long), 1586363300377(Long), https://avatars0.githubusercontent.com/u/60779577?v=4(String)
+2020-04-09 00:28:20.381 DEBUG 48796 --- [http-nio-8887-exec-2] c.l.commu.mapper.UserMapper.insert       : <==    Updates: 1
+2020-04-09 00:28:20.396 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:20.396 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String)
+2020-04-09 00:28:20.399 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:28:20.415 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:28:20.415 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:28:20.417 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:28:20.418 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==>  Preparing: select count(*) from question 
+2020-04-09 00:28:20.418 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : ==> Parameters: 
+2020-04-09 00:28:20.419 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.QuestionMapperExt.countBySearch  : <==      Total: 1
+2020-04-09 00:28:20.420 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==>  Preparing: select * from question limit ? , ? 
+2020-04-09 00:28:20.420 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-04-09 00:28:20.421 DEBUG 48796 --- [http-nio-8887-exec-4] c.l.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-04-09 00:28:23.301 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:23.302 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String)
+2020-04-09 00:28:23.304 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:28:23.307 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:28:23.307 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:28:23.309 DEBUG 48796 --- [http-nio-8887-exec-5] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:28:23.524 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:23.525 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String)
+2020-04-09 00:28:23.531 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:28:23.544 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:28:23.547 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:28:23.554 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:28:23.571 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:23.573 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String)
+2020-04-09 00:28:23.577 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:28:23.585 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:28:23.587 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:28:23.590 DEBUG 48796 --- [http-nio-8887-exec-6] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:28:34.919 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, name, account_id, token, gmt_create, gmt_modified, avatar_url from userfor WHERE ( token = ? ) 
+2020-04-09 00:28:34.920 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : ==> Parameters: c0638cd7-d7b3-41e9-9ffc-3480411a2bbf(String)
+2020-04-09 00:28:34.925 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-04-09 00:28:34.929 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-04-09 00:28:34.930 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : ==> Parameters: 1(Long), 0(Integer)
+2020-04-09 00:28:34.932 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.c.m.N.countByExample                 : <==      Total: 1
+2020-04-09 00:28:34.941 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==>  Preparing: insert into question (id, title, gmt_create, gmt_modified, creator, comment_count, view_count, like_count, tag, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2020-04-09 00:28:34.942 DEBUG 48796 --- [http-nio-8887-exec-8] c.l.commu.mapper.QuestionMapper.insert   : ==> Parameters: null, 第一个问题测试(String), 1586363314940(Long), 1586363314940(Long), 1(Long), 0(Integer), 0(Integer), 0(Integer), Java,JavaScrpit(String), 测试问题(String)
+2020-04-09 00:28:44.673  INFO 48796 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-09 00:28:44.677  INFO 48796 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-09 00:28:44.686  INFO 48796 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

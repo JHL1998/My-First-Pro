@@ -79,7 +79,7 @@ public class QuestionService {
 
         for(Question question:questions){
 
-           User user= userMapper.selectByPrimaryKey(question.getCreatorId());
+           User user= userMapper.selectByPrimaryKey(question.getCreator());
            QuestionDTO questionDTO=new QuestionDTO();
             // BeanUtils方法代替了 往questionDTO 中重复set的步骤
             //即快速的将question中的所有属性，拷贝到questionDTO中
@@ -101,7 +101,7 @@ public class QuestionService {
 
 
         QuestionExample questionExample=new QuestionExample();
-        questionExample.createCriteria().andCreatorIdEqualTo(userId);
+        questionExample.createCriteria().andCreatorEqualTo(userId);
         Integer totalCount = (int)questionMapper.countByExample(questionExample);
 
         if(totalCount%size==0){
@@ -121,13 +121,13 @@ public class QuestionService {
         //size*(page-1)=count
         Integer offset=size*(page-1);
         QuestionExample example=new QuestionExample();
-        example.createCriteria().andCreatorIdEqualTo(userId);
+        example.createCriteria().andCreatorEqualTo(userId);
         List<Question>questions=questionMapper.selectByExampleWithRowbounds(example,new RowBounds(offset,size));
         List<QuestionDTO>questionDTOList=new ArrayList<>();
 
         for(Question question:questions){
 
-            User user= userMapper.selectByPrimaryKey(question.getCreatorId());
+            User user= userMapper.selectByPrimaryKey(question.getCreator());
             QuestionDTO questionDTO=new QuestionDTO();
             // BeanUtils方法代替了 往questionDTO 中重复set的步骤
             //即快速的将question中的所有属性，拷贝到questionDTO中
@@ -151,7 +151,7 @@ public class QuestionService {
        QuestionDTO questionDTO=new QuestionDTO();
        BeanUtils.copyProperties(question,questionDTO);
        //传入User 这样question.user.name才会有值
-        User user=userMapper.selectByPrimaryKey(question.getCreatorId());
+        User user=userMapper.selectByPrimaryKey(question.getCreator());
         questionDTO.setUser(user);
 
 
