@@ -142,9 +142,9 @@
 				<version>5.2.4</version>
 				<configuration>
 					<driver>com.mysql.cj.jdbc.Driver</driver>
-					<url>jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false</url>
+					<url>jdbc:mysql://47.92.115.93/mybatis?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false</url>
 					<user>root</user>
-					<password>admin123</password>
+					<password>ADmin123?</password>
 					<!--<schemas></schemas>-->
 				</configuration>
 

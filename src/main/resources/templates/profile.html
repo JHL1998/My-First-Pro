@@ -21,8 +21,8 @@
 
 
             <!--我的问题 -->
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section=='question'}" >
-                <div class="media" th:each="question :${pagination.data}">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section=='questions'}" >
+                <div class="media" th:each="question:${pagination.data}">
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded"
