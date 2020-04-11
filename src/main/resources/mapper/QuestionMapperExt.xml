@@ -61,6 +61,9 @@
    <if test="search != null and search != ''" >
       and title regexp #{search}
    </if>
+     <if test="tag != null and tag != ''" >
+       and tag regexp #{tag}
+     </if>
 
    </where>
 
@@ -70,6 +73,9 @@
     <where>
       <if test="search != null and search != ''"  >
         and title regexp #{search}
+      </if>
+      <if test="tag != null and tag != ''" >
+        and tag regexp #{tag}
       </if>
 
     </where>

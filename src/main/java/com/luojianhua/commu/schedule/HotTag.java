@@ -22,13 +22,13 @@ public class HotTag {
     @Autowired
     private HotTagCache hotTagCache;
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 1000*60*60*3)
 //    @Scheduled(cron = "0 0 1 * * *")
     public void hotTag() {
         int offset = 0;
         int limit = 5;
         Map<String, Integer> tagMap = new HashMap<>();
-        log.info("The time is now{}", new Date());
+        log.info("hotTagSchedule start{}", new Date());
         List<Question> list = new ArrayList<>();
         //如果不是第一页，或者还有下一页
         while (offset == 0 || list.size() == limit) {
@@ -47,14 +47,8 @@ public class HotTag {
 
                 offset += limit;
             }
-            hotTagCache.setTags(tagMap);
-            hotTagCache.getTags().forEach((k,v)->{
-                System.out.print(k);
-                System.out.print(":");
-                System.out.print(v);
-                System.out.println();
-
-            });
+            hotTagCache.updateTags(tagMap);
+            log.info("hotTagSchedule stop{}", new Date());
 
         }
     }

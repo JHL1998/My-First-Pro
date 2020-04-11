@@ -39,22 +39,20 @@ public class QuestionService {
     @Autowired
     private QuestionMapperExt questionMapperExt;
 
-    public PageDTO find(String search ,Integer page ,  Integer size){
+    public PageDTO find(String tag, String search, Integer page, Integer size){
 
 
         if (StringUtils.isNotBlank(search)) {
             String []tags=StringUtils.split(search," ");
             search=Arrays.stream(tags).collect(Collectors.joining("|"));
         }
-
-
-
         PageDTO pageDTO=new PageDTO();
        Integer totalPage;
 
 
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         questionQueryDTO.setSearch(search);
+        questionQueryDTO.setTag(tag);
         Integer totalCount=questionMapperExt.countBySearch(questionQueryDTO);
 
 

@@ -10,20 +10,19 @@ import java.util.*;
 @Data
 public class HotTagCache {
 
-    private Map<String,Integer> tags=new HashMap<>();
     //直接存热门标签的名字
     private List<String> hot=new ArrayList<>();
 
     // 堆排序
     public void updateTags(Map<String,Integer> tags){
-         int max=2;
+         int max=10;
         PriorityQueue<HotTagDTO> priorityQueue=new PriorityQueue<>(max);
         tags.forEach((name,priority)->{
             HotTagDTO hotTagDTO = new HotTagDTO();
             hotTagDTO.setName(name);
             hotTagDTO.setPriority(priority);
 
-            if(priorityQueue.size()<2){
+            if(priorityQueue.size()<10){
                 priorityQueue.add(hotTagDTO);
             }else{
                 //拿到最小的元素
